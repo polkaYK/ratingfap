@@ -4,7 +4,6 @@ Created on Tue Mar 28 05:28:52 2017
 
 @author: polka
 """
-
 import signal
 import gi
 gi.require_version('Gtk', '3.0')
@@ -12,11 +11,11 @@ gi.require_version('AppIndicator3', '0.1')
 from gi.repository import Gtk, AppIndicator3, GObject
 import time
 from threading import Thread
-
 import urllib.request
-import requests
 from bs4 import BeautifulSoup as Bs
 import webbrowser
+
+from settings import default_team_id, default_player_id
 
 class Member():
     def __init__(self, type_string, ID):
@@ -152,16 +151,17 @@ class Indicator():
     def menu_stop(self, source):
         Gtk.main_quit()
 
-builder = Gtk.Builder()
-builder.add_from_file("window.glade")
-
-team = Member('team','48913')    
-player = Member('player','60926')
-
-ind = Indicator(team, player)
-# this is where we call GObject.threads_init()
-GObject.threads_init()
-signal.signal(signal.SIGINT, signal.SIG_DFL)
-
-
-Gtk.main()
+if __name__ == '__main__':
+    builder = Gtk.Builder()
+    builder.add_from_file("window.glade")
+    
+    team = Member('team',default_team_id)    
+    player = Member('player', default_player_id)
+    
+    ind = Indicator(team, player)
+    # this is where we call GObject.threads_init()
+    GObject.threads_init()
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+    
+    
+    Gtk.main()
