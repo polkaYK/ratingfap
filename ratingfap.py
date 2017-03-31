@@ -57,7 +57,7 @@ class Indicator():
     
     def __init__(self, team, player):
         self.app = 'ratingfap0.1'
-        iconpath = "/home/polka/github/ratingfap/owl.png"
+        iconpath = "/home/polka/github/ratingfap/big_owl.png"
         self.indicator = AppIndicator3.Indicator.new(self.app, 
                                                      iconpath,
                                                      AppIndicator3.IndicatorCategory.OTHER)
