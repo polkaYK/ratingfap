@@ -14,6 +14,7 @@ from threading import Thread
 import urllib.request
 from bs4 import BeautifulSoup as Bs
 import webbrowser
+import os
 
 from settings import default_team_id, default_player_id
 
@@ -56,7 +57,7 @@ class Indicator():
     
     def __init__(self, team, player):
         self.app = 'ratingfap0.1'
-        iconpath = "/home/polka/github/ratingfap/big_owl.png"
+        iconpath = os.path.dirname(os.path.abspath(__file__))+"/big_owl.png"
         self.indicator = AppIndicator3.Indicator.new(self.app, 
                                                      iconpath,
                                                      AppIndicator3.IndicatorCategory.OTHER)
