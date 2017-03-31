@@ -8,7 +8,7 @@
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">mouse</property>
-    <property name="icon">owl.png</property>
+    <property name="icon">big_owl.png</property>
     <property name="urgency_hint">True</property>
     <property name="deletable">False</property>
     <property name="gravity">north-east</property>
@@ -47,7 +47,6 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="text" translatable="yes">1111111</property>
-                    <property name="overwrite_mode">True</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -68,6 +67,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="yalign">0.54000002145767212</property>
+                <property name="image_position">top</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>

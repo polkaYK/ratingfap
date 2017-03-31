@@ -9,8 +9,7 @@
     <property name="modal">True</property>
     <property name="window_position">mouse</property>
     <property name="icon">owl.png</property>
-    <property name="accept_focus">False</property>
-    <property name="focus_on_map">False</property>
+    <property name="urgency_hint">True</property>
     <property name="deletable">False</property>
     <property name="gravity">north-east</property>
     <child>
